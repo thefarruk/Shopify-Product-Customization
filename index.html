@@ -1,0 +1,22 @@
+<div class="custom-product">
+  <div class="product-preview">
+    <img id="productImage" src="{{ product.featured_image | img_url: '600x600' }}" alt="{{ product.title }}">
+    <div id="customTextPreview" class="preview-text"></div>
+  </div>
+
+  <div class="custom-options">
+    <h3>Customize Your Product</h3>
+
+    <label>Choose Color:</label>
+    <div class="color-options">
+      <button class="color-btn" data-color="red" style="background:red;"></button>
+      <button class="color-btn" data-color="blue" style="background:blue;"></button>
+      <button class="color-btn" data-color="black" style="background:black;"></button>
+    </div>
+
+    <label>Enter Custom Text:</label>
+    <input type="text" id="customText" name="properties[Custom Text]" placeholder="Type your text...">
+
+    <button type="submit" class="add-to-cart-btn">Add to Cart</button>
+  </div>
+</div>
