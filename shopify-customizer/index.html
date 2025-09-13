@@ -1,6 +1,83 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Shopify Product Customization – Demo</title>
+  <link rel="stylesheet" href="style.css">
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <main class="wrap">
+    <section class="custom-card">
+      <!-- Preview -->
+      <div class="preview">
+        <div class="preview-frame">
+          <img id="productImage"
+               src="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?q=80&w=800"
+               alt="Product preview">
+          <div id="customTextPreview" class="preview-text">YOUR TEXT</div>
+        </div>
+        <ul class="badges">
+          <li>Premium</li>
+          <li>Responsive</li>
+          <li>Live Preview</li>
+        </ul>
+      </div>
+
+      <!-- Options -->
+      <form class="options" onsubmit="return false;">
+        <h1>Customize Your Product</h1>
+        <p class="subtitle">Make it personal. Choose a color and add your text.</p>
+
+        <!-- Color chooser -->
+        <label class="lbl">Color</label>
+        <div class="color-row" id="colorRow">
+          <button class="color-dot" data-color="#000000" aria-label="Black" style="--c:#000000"></button>
+          <button class="color-dot" data-color="#9b59b6" aria-label="Purple" style="--c:#9b59b6"></button>
+          <button class="color-dot" data-color="#e74c3c" aria-label="Red" style="--c:#e74c3c"></button>
+          <button class="color-dot" data-color="#2980b9" aria-label="Blue" style="--c:#2980b9"></button>
+          <button class="color-dot" data-color="#27ae60" aria-label="Green" style="--c:#27ae60"></button>
+        </div>
+
+        <!-- Text input -->
+        <label for="customText" class="lbl">Custom text</label>
+        <input id="customText" type="text" maxlength="20" placeholder="Type up to 20 characters">
+
+        <!-- Size chooser -->
+        <label class="lbl">Text size</label>
+        <input id="sizeRange" type="range" min="16" max="48" value="28">
+
+        <!-- Alignment -->
+        <label class="lbl">Text position</label>
+        <div class="align-row">
+          <button class="align-btn" data-align="top">Top</button>
+          <button class="align-btn is-active" data-align="center">Center</button>
+          <button class="align-btn" data-align="bottom">Bottom</button>
+        </div>
+
+        <!-- Add to cart (demo) -->
+        <button id="addToCart" class="cta">Add to Cart</button>
+
+        <!-- Hidden props for Shopify -->
+        <input type="hidden" name="properties[Color]" id="propColor" value="#000000">
+        <input type="hidden" name="properties[Custom Text]" id="propText" value="YOUR TEXT">
+        <input type="hidden" name="properties[Text Size]" id="propSize" value="28">
+        <input type="hidden" name="properties[Text Position]" id="propPos" value="center">
+      </form>
+    </section>
+  </main>
+
+  <footer class="foot">
+    © 2025 Customization Demo — Luxury UI
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
+v<!DOCTYPE html>
+<html lang="en">
+<head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
   <title>Shopify Product Customization – Demo</title>
